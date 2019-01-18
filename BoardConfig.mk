@@ -25,6 +25,9 @@ else
 TARGET_OTA_ASSERT_DEVICE := oneplus7pro,OnePlus7Pro
 endif
 
+# Display
+TARGET_SCREEN_DENSITY := 560
+
 # Recovery
 ifneq ($(TARGET_IS_ONEPLUS_T_DEVICE),true)
 TARGET_PREBUILT_RECOVERY_RAMDISK_CPIO := $(DEVICE_PATH)/ramdisk-recovery.cpio
