@@ -20,7 +20,9 @@
 DEVICE_PATH := device/oneplus/oneplus7pro
 
 # Recovery
+ifneq ($(TARGET_IS_ONEPLUS_T_DEVICE),true)
 TARGET_PREBUILT_RECOVERY_RAMDISK_CPIO := $(DEVICE_PATH)/ramdisk-recovery.cpio
+endif
 
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/framework_manifest.xml
