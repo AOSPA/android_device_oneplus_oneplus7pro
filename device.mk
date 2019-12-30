@@ -14,7 +14,11 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
+ifneq ($(TARGET_IS_ONEPLUS_T_DEVICE),true)
+PRODUCT_SHIPPING_API_LEVEL := 28
+else
+PRODUCT_SHIPPING_API_LEVEL := 29
+endif
 
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/oneplus/oneplus7pro/oneplus7pro-vendor.mk)
@@ -33,6 +37,14 @@ PRODUCT_PACKAGES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-pa
+
+ifneq ($(TARGET_IS_ONEPLUS_T_DEVICE),true)
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-specific/op7
+else
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-specific/op7t
+endif
 
 # Properties
 -include $(LOCAL_PATH)/device-props.mk
