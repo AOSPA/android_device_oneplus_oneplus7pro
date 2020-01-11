@@ -25,6 +25,9 @@ PRODUCT_PACKAGES += \
     vendor.pa.camera.motor@1.0-service.oneplus_oneplus7pro \
     OnePlusCameraHelper
 
+# ParanoidDoze
+PRODUCT_PACKAGES += ParanoidDoze
+
 # Display
 PRODUCT_PACKAGES += \
 	init.display.oneplus7pro.rc
