@@ -21,11 +21,6 @@ DEVICE_PATH := device/oneplus/oneplus7pro
 
 TARGET_OTA_ASSERT_DEVICE := oneplus7pro,OnePlus7Pro
 
-# Recovery
-ifneq ($(TARGET_IS_ONEPLUS_T_DEVICE),true)
-TARGET_PREBUILT_RECOVERY_RAMDISK_CPIO := $(DEVICE_PATH)/ramdisk-recovery.cpio
-endif
-
 # Fingerprint
 SOONG_CONFIG_ONEPLUS_MSMNILE_FOD_POS_X = 610
 SOONG_CONFIG_ONEPLUS_MSMNILE_FOD_POS_Y = 2618
