@@ -25,8 +25,6 @@ $(call inherit-product-if-exists, vendor/oneplus/oneplus7pro/oneplus7pro-vendor.
 
 # Camera
 PRODUCT_PACKAGES += \
-    vendor.pa.camera.motor@1.0 \
-    vendor.pa.camera.motor@1.0-service.oneplus_oneplus7pro \
     OnePlusCameraHelper
 
 # Display
