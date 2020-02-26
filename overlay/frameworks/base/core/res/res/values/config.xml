@@ -345,4 +345,6 @@
     <!-- Radius of the software rounded corners. -->
     <dimen name="rounded_corner_radius">140px</dimen>
 
+    <!-- Whether the device has a popup camera -->
+    <bool name="config_hasPopupCamera">true</bool>
 </resources>
