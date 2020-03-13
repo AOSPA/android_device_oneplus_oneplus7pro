@@ -19,6 +19,8 @@
 
 DEVICE_PATH := device/oneplus/oneplus7pro
 
+TARGET_OTA_ASSERT_DEVICE := oneplus7pro,OnePlus7Pro,oneplus7pronr,OnePlus7ProNR
+
 # Recovery
 ifneq ($(TARGET_IS_ONEPLUS_T_DEVICE),true)
 TARGET_PREBUILT_RECOVERY_RAMDISK_CPIO := $(DEVICE_PATH)/ramdisk-recovery.cpio
