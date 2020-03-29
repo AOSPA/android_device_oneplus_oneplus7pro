@@ -19,7 +19,11 @@
 
 DEVICE_PATH := device/oneplus/oneplus7pro
 
+ifneq ($(TARGET_IS_ONEPLUS_T_DEVICE),true)
 TARGET_OTA_ASSERT_DEVICE := oneplus7pro,OnePlus7Pro
+else
+TARGET_OTA_ASSERT_DEVICE := oneplus7tpro,OnePlus7TPro
+endif
 
 # Recovery
 ifneq ($(TARGET_IS_ONEPLUS_T_DEVICE),true)
