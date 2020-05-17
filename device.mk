@@ -31,17 +31,19 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	init.display.oneplus7pro.rc
 
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-pa
+# Shared RRO Overlays
+PRODUCT_PACKAGES += \
+    Oneplus7FrameworksRes \
+    Oneplus7SystemUI \
+    Oneplus7SystemUIPA
 
+# Variant-specific RRO overlays
 ifneq ($(TARGET_IS_ONEPLUS_T_DEVICE),true)
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-specific/op7
+PRODUCT_PACKAGES += \
+    Oneplus7tSpecificFrameworksRes
 else
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-specific/op7t
+PRODUCT_PACKAGES += \
+    Oneplus7SpecificFrameworksRes
 endif
 
 # Screen density
