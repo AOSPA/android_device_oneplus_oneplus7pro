@@ -16,7 +16,8 @@ PRODUCT_PACKAGES += \
     OnePlus7ProFrameworks \
     OnePlus7ProSettings \
     OnePlus7ProSettingsProvider \
-    OnePlus7ProSystemUI
+    OnePlus7ProSystemUI \
+    ApertureOverlay
 
 # Audio
 PRODUCT_COPY_FILES += \
